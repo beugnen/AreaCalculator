@@ -9,17 +9,9 @@
 
 namespace MickyD.AreaCalculator.Contracts
 {
-    public interface IShape
+    public interface ITriangle : IShape
     {
-        /// <summary>
-        /// Gets the area of the shape.
-        /// </summary>
-        /// <value>
-        /// The area.
-        /// </value>
-        float Area { get; }
-
-        string Name {get;}
-        void Reset();
+        float Base { get; set; }
+        float Height { get; set; }
     }
 }

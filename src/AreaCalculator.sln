@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MickyD.AreaCalculator.Shape
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MickyD.AreaCalculator.Contracts", "MickyD.AreaCalculator.Contracts\MickyD.AreaCalculator.Contracts.csproj", "{7E2A3F85-0E32-4982-B30A-A739DC36334E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MickyD.AreaCalculator.ViewModels", "MickyD.AreaCalculator.ViewModels\MickyD.AreaCalculator.ViewModels.csproj", "{70C6AF92-840B-4745-8E85-D123B9C38EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MickyD.AreaCalculator.Views", "MickyD.AreaCalculator.Views\MickyD.AreaCalculator.Views.csproj", "{110B2B4E-2EA0-4E99-8918-40758012288B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{7E2A3F85-0E32-4982-B30A-A739DC36334E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E2A3F85-0E32-4982-B30A-A739DC36334E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E2A3F85-0E32-4982-B30A-A739DC36334E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70C6AF92-840B-4745-8E85-D123B9C38EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C6AF92-840B-4745-8E85-D123B9C38EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C6AF92-840B-4745-8E85-D123B9C38EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C6AF92-840B-4745-8E85-D123B9C38EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110B2B4E-2EA0-4E99-8918-40758012288B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110B2B4E-2EA0-4E99-8918-40758012288B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110B2B4E-2EA0-4E99-8918-40758012288B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110B2B4E-2EA0-4E99-8918-40758012288B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

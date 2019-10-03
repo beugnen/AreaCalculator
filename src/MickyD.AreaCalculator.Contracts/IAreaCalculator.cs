@@ -9,17 +9,9 @@
 
 namespace MickyD.AreaCalculator.Contracts
 {
-    public interface IShape
+    public interface IAreaCalculator<T>
+        where T : class, IShape
     {
-        /// <summary>
-        /// Gets the area of the shape.
-        /// </summary>
-        /// <value>
-        /// The area.
-        /// </value>
-        float Area { get; }
-
-        string Name {get;}
-        void Reset();
+        float CalculateArea(T shapeBase);
     }
 }

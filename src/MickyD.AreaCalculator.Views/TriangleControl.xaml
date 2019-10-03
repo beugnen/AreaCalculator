@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="MickyD.AreaCalculator.Views.TriangleControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MickyD.AreaCalculator.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:MickyD.AreaCalculator.ViewModels;assembly=MickyD.AreaCalculator.ViewModels"
+    d:DesignHeight="302"
+    d:DesignWidth="396"
+    mc:Ignorable="d">
+
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Base:" />
+            <TextBox
+                x:Name="BaseTextBox"
+                Margin="0,0,0,4"
+                Text="{Binding TriangleBase, Mode=TwoWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:TriangleControl}}, UpdateSourceTrigger=PropertyChanged}"
+                TextWrapping="Wrap" />
+            <Label Content="Height:" />
+            <TextBox
+                x:Name="HeightTextBox"
+                Margin="0,0,0,4"
+                Text="{Binding TriangleHeight, Mode=TwoWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:TriangleControl}}, UpdateSourceTrigger=PropertyChanged}"
+                TextWrapping="Wrap" />
+
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -4,19 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB2D7C41-1517-4FFB-93AC-3E0C6824EBA1}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>AreaCalculator</RootNamespace>
-    <AssemblyName>AreaCalculator</AssemblyName>
+    <ProjectGuid>{110B2B4E-2EA0-4E99-8918-40758012288B}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>MickyD.AreaCalculator.Views</RootNamespace>
+    <AssemblyName>MickyD.AreaCalculator.Views</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -51,20 +48,27 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="CircleControl.xaml">
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShapesPickerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TriangleControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="CircleControl.xaml.cs">
+      <DependentUpon>CircleControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Converters\ShapeToVisibilityConverter.cs" />
+    <Compile Include="ShapesPickerControl.xaml.cs">
+      <DependentUpon>ShapesPickerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TriangleControl.xaml.cs">
+      <DependentUpon>TriangleControl.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -92,25 +96,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MickyD.AreaCalculator.Contracts\MickyD.AreaCalculator.Contracts.csproj">
       <Project>{7e2a3f85-0e32-4982-b30a-a739dc36334e}</Project>
       <Name>MickyD.AreaCalculator.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\MickyD.AreaCalculator.Shapes\MickyD.AreaCalculator.Shapes.csproj">
-      <Project>{6b6bfefb-e00a-479c-b95f-c87dbb79c6e0}</Project>
+      <Project>{6B6BFEFB-E00A-479C-B95F-C87DBB79C6E0}</Project>
       <Name>MickyD.AreaCalculator.Shapes</Name>
     </ProjectReference>
     <ProjectReference Include="..\MickyD.AreaCalculator.ViewModels\MickyD.AreaCalculator.ViewModels.csproj">
       <Project>{70c6af92-840b-4745-8e85-d123b9c38ebf}</Project>
       <Name>MickyD.AreaCalculator.ViewModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MickyD.AreaCalculator.Views\MickyD.AreaCalculator.Views.csproj">
-      <Project>{110b2b4e-2ea0-4e99-8918-40758012288b}</Project>
-      <Name>MickyD.AreaCalculator.Views</Name>
-    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
